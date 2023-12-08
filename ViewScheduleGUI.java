@@ -10,7 +10,7 @@ public class ViewScheduleGUI extends JFrame {
     private JButton viewButton;
     private List<Machine> machines; // This should be fetched from a database or other data source
 
-    public ViewScheduleGUI(List<Machine> machines) {
+    public ViewScheduleGUI(List<Machine> dummyMachines) {
         this.machines = machines;
         initializeUI();
         setTitle("View Machine Schedule");

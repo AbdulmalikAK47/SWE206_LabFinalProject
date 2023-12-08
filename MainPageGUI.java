@@ -73,8 +73,8 @@ public class MainPageGUI extends JFrame {
 
     private void openViewScheduleGUI() {
         
-        ViewScheduleGUI ViewScheduleGUI = new ViewScheduleGUI( );
-        ViewScheduleGUI.setVisible(true);
+ /*  ViewScheduleGUI ViewScheduleGUI = new ViewScheduleGUI( );
+        ViewScheduleGUI.setVisible(true); */
        
     }
 
