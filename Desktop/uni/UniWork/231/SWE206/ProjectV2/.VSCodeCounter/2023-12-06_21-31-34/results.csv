@@ -1,0 +1,37 @@
+"filename", "language", "Java", "comment", "blank", "total"
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/Admin.java", "Java", 9, 4, 5, 18
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/AuthenticationSystem.class", "Java", 14, 0, 0, 14
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/AuthenticationSystem.java", "Java", 13, 1, 4, 18
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/Machine.class", "Java", 19, 0, 0, 19
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/Machine.java", "Java", 53, 4, 15, 72
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/MainPageGUI.class", "Java", 45, 11, 0, 56
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/MainPageGUI.java", "Java", 63, 1, 22, 86
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ManageMachinesGUI.class", "Java", 45, 0, 0, 45
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ManageMachinesGUI.java", "Java", 55, 7, 13, 75
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ManageProjectsGUI$1.class", "Java", 10, 0, 0, 10
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ManageProjectsGUI.class", "Java", 40, 0, 0, 40
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ManageProjectsGUI.java", "Java", 68, 1, 12, 81
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ManageTeamsGUI.class", "Java", 56, 0, 0, 56
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ManageTeamsGUI.java", "Java", 71, 5, 20, 96
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ManageUsersGUI$1.class", "Java", 9, 0, 0, 9
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ManageUsersGUI$2.class", "Java", 9, 0, 0, 9
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ManageUsersGUI.class", "Java", 76, 0, 0, 76
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ManageUsersGUI.java", "Java", 123, 15, 34, 172
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/Member.java", "Java", 16, 4, 7, 27
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/Project.class", "Java", 19, 0, 0, 19
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/Project.java", "Java", 52, 3, 14, 69
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/Reservation.class", "Java", 21, 0, 0, 21
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/Reservation.java", "Java", 45, 2, 12, 59
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ScheduleManager.java", "Java", 19, 4, 8, 31
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ScheduleManagerGUI.java", "Java", 57, 3, 12, 72
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/SignInGUI$1.class", "Java", 10, 0, 0, 10
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/SignInGUI.class", "Java", 48, 0, 0, 48
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/SignInGUI.java", "Java", 52, 0, 11, 63
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/Team.class", "Java", 22, 0, 0, 22
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/Team.java", "Java", 46, 3, 12, 61
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/TimeSlot.class", "Java", 12, 0, 0, 12
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/TimeSlot.java", "Java", 20, 2, 7, 29
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/User.class", "Java", 12, 0, 0, 12
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/User.java", "Java", 36, 1, 10, 47
+"/Users/abdulrahmanalzamil/Desktop/uni/UniWork/231/SWE206/Project V2/ViewScheduleGUI.java", "Java", 0, 0, 1, 1
+"Total", "-", 1265, 71, 219, 1555
