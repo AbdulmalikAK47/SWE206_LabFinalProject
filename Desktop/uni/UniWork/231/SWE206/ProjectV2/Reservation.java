@@ -1,14 +1,14 @@
-public class Reservation {
+public class Reservation extends Machine{
     private String reservationId;
-    private Machine machine;
     private User user;
     private TimeSlot timeSlot;
 
-    public Reservation(String reservationId, Machine machine, User user, TimeSlot timeSlot) {
+
+    public Reservation(String reservationId, User user, TimeSlot timeSlot, ) {
         this.reservationId = reservationId;
-        this.machine = machine;
         this.user = user;
         this.timeSlot = timeSlot;
+        
     }
 
     // Getters and Setters

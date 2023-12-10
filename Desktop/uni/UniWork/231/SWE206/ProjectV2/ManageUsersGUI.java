@@ -90,7 +90,7 @@ public class ManageUsersGUI extends JFrame {
         
                 // Simple validation
                 if (!name.isEmpty() && !email.isEmpty()) {
-                    User newUser = new User("01", name, email, role);
+                    User newUser = new User( "id", name, email, role);
                     users.add(newUser);
                     refreshUserList();
                 } else {
@@ -155,8 +155,30 @@ public class ManageUsersGUI extends JFrame {
     
 
     private void deleteUser() {
-        // Delete the selected user
-        // Update the user list after deleting
+         // Get the selected user
+    User selectedUser = userList.getSelectedValue();
+    if (selectedUser == null) {
+        JOptionPane.showMessageDialog(this, "Please select a user to delete", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    // Confirm deletion
+    int response = JOptionPane.showConfirmDialog(this, 
+        "Are you sure you want to delete " + selectedUser.getName() + "?", 
+        "Confirm Deletion", 
+        JOptionPane.YES_NO_OPTION, 
+        JOptionPane.WARNING_MESSAGE);
+
+    if (response == JOptionPane.YES_OPTION) {
+        // Logic to delete the user from the data source
+        // For example: userService.deleteUser(selectedUser.getUserId());
+
+        // Remove the user from the list model
+        userModel.removeElement(selectedUser);
+
+        // Optionally, refresh the list (not needed if you're directly modifying the DefaultListModel)
+        // refreshUserList();
+    }
     }
 
     private void refreshUserList() {

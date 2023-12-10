@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class MainPageGUI extends JFrame {
     private JButton manageProjectsButton;
@@ -10,6 +11,7 @@ public class MainPageGUI extends JFrame {
     private JButton manageMachinesButton;
     private JButton viewScheduleButton;
     private JButton signOutButton;
+    private ArrayList<Machine> machines;
 
     public MainPageGUI() {
         initializeUI();
@@ -38,6 +40,12 @@ public class MainPageGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 openViewScheduleGUI();
+            }
+        });
+        manageUsersButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                openManageUsers();
             }
         });
 
@@ -73,8 +81,9 @@ public class MainPageGUI extends JFrame {
 
     private void openViewScheduleGUI() {
         
- /*  ViewScheduleGUI ViewScheduleGUI = new ViewScheduleGUI( );
-        ViewScheduleGUI.setVisible(true); */
+        ManageMachinesGUI a = new ManageMachinesGUI();
+        ViewScheduleGUI ViewScheduleGUI = new ViewScheduleGUI(a.getMachineList());
+        ViewScheduleGUI.setVisible(true); 
        
     }
 
@@ -85,10 +94,8 @@ public class MainPageGUI extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new MainPageGUI().setVisible(true));
-    }
-
    
-}
+} }
  
 
  

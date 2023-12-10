@@ -6,13 +6,12 @@ public class Machine {
     private String machineId;
   
     private String status; // e.g., "Available", "In Use", "Under Maintenance"
-    private List<Reservation> reservations; // A list to track reservations for this machine
+    private ArrayList<TimeSlot> timeSlots; // A list to track reservations for this machine
 
-    public Machine(String machineId,  String status) {
+    public Machine(String machineId,  String status, ArrayList<TimeSlot> timeSlots) {
         this.machineId = machineId;
-     
         this.status = status;
-        this.reservations = new ArrayList<>();
+        this.timeSlots = timeSlots;
     }
 
     // Getters and Setters
@@ -35,34 +34,34 @@ public class Machine {
         this.status = status;
     }
     public String getScheduleAsString() {
-        if (reservations.isEmpty()) {
+        if (timeSlots.isEmpty()) {
             return "No reservations scheduled.";
         }
 
         StringBuilder schedule = new StringBuilder();
-        for (Reservation reservation : reservations) {
-            schedule.append(reservation.toString()).append("\n"); // Format each reservation
+        for (TimeSlot timeSlots : timeSlots) {
+            schedule.append(timeSlots.toString()).append("\n"); // Format each reservation
         }
 
         return schedule.toString();
     }
 
-    public List<Reservation> getReservations() {
-        return reservations;
+    public ArrayList<TimeSlot> getTimeSlots() {
+        return timeSlots;
     }
 
-    public void setReservations(List<Reservation> reservations) {
-        this.reservations = reservations;
+    public void setTimeSlots(ArrayList<TimeSlot> timeSlots) {
+        this.timeSlots = timeSlots;
     }
 
     // Method to add a reservation to the machine
-    public void addReservation(Reservation reservation) {
-        reservations.add(reservation);
+    public void addTimeSlot(TimeSlot timeSlot) {
+        timeSlots.add(timeSlot);
     }
 
     // Method to remove a reservation from the machine
-    public void removeReservation(Reservation reservation) {
-        reservations.remove(reservation);
+    public void removeTimeSlot(TimeSlot timeSlot) {
+        timeSlots.remove(timeSlot);
     }
     
     
@@ -84,7 +83,7 @@ public class Machine {
                "machineId='" + machineId + '\'' +
                 + '\'' +
                ", status='" + status + '\'' +
-               ", reservations=" + reservations +
+               ", reservations=" + timeSlots +
                '}';
     }
 

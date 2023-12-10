@@ -13,6 +13,7 @@ public class ManageTeamsGUI extends JFrame {
     private JButton deleteTeamButton;
     private List<Team> teams; // This would typically be fetched from a database
 
+
     public ManageTeamsGUI() {
         this.teams = new ArrayList<>(); // Placeholder for team data
         initializeUI();
@@ -33,7 +34,13 @@ public class ManageTeamsGUI extends JFrame {
         editTeamButton.addActionListener(e -> editTeam());
         deleteTeamButton.addActionListener(e -> deleteTeam());
 
-       
+        deleteTeamButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("ss");
+                deleteTeam();
+            }
+        });
 
         this.setLayout(new BorderLayout());
         this.add(new JScrollPane(teamList), BorderLayout.CENTER);
@@ -70,14 +77,71 @@ public class ManageTeamsGUI extends JFrame {
     }
 
     private void editTeam() {
-        // Open a dialog to edit the selected team's details
-        // Update the team list after editing
+       Team selectedTeam = teamList.getSelectedValue();
+    if (selectedTeam == null) {
+        JOptionPane.showMessageDialog(this, "Please select a team to edit", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    // Create fields for editing team details
+    JTextField teamNameField = new JTextField(selectedTeam.getName(), 20);
+    JTextField teamDescArea = new JTextField(selectedTeam.getName(), 20);
+
+    // Add more fields if needed (e.g., for team members)
+
+    // Set up a panel with labels and fields
+    JPanel panel = new JPanel(new GridLayout(0, 2));
+    panel.add(new JLabel("Team Name:"));
+    panel.add(teamNameField);
+    panel.add(new JLabel("Team Description:"));
+    panel.add(teamDescArea);
+    // Add more components to the panel if needed
+
+    // Show a dialog with the panel
+    int result = JOptionPane.showConfirmDialog(this, panel, 
+        "Edit Team Details", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+
+    if (result == JOptionPane.OK_OPTION) {
+        String teamName = teamNameField.getText().trim();
+        
+        String teamdescArea= teamDescArea.getText().trim(); 
+
+        // Retrieve other details from fields if necessary
+
+        // Simple validation
+        if (!teamName.isEmpty()) {
+            selectedTeam.setName(teamName);
+            selectedTeam.setName(teamdescArea);
+
+            // Update other attributes of the team as necessary
+
+            // Logic to update the team in the data source
+            // For example: teamService.updateTeam(selectedTeam);
+
+            // Refresh the team list display
+            teamListModel.setElementAt(selectedTeam, teamList.getSelectedIndex());
+        } else {
+            JOptionPane.showMessageDialog(this, "Team name cannot be empty", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
     }
 
     private void deleteTeam() {
-        // Delete the selected team
-        // Update the team list after deleting
-    }
+       
+            Team selectedTeam = teamList.getSelectedValue();
+            System.out.println("ss");
+            if (selectedTeam == null) {
+                JOptionPane.showMessageDialog(this, "Please select a team to delete", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+    
+            int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this team?", "Confirm Deletion", JOptionPane.YES_NO_OPTION);
+            if (confirm == JOptionPane.YES_OPTION) {
+                teams.remove(selectedTeam);
+                teamListModel.removeElement(selectedTeam);
+            }
+        }
+    
 
     private void refreshTeamList() {
         teamListModel.clear();
